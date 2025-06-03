@@ -1,1 +1,38 @@
 # 19-bit-CPU-Verilog
+>A 19-bit processor designed using the Verilog harware description language(HDL). The processor is capable of fetching and executing a set of 19-bit machine instructions.
+
+# Schematic
+ ![Image Alt](image_url)
+# Instruction Set
+
+The instruction set plays a very important role to determine the operation of the CPU. The Code input to the Instruction memory is 19-bit long. This is sent to the instruction register which takes the bits [18:14] as OPCODE and [13:0] as address to start with.
+
+The instruction set are designed in a way to achieve all the necessary functions. Since the OPCODE controls the activity, the OPCODE is used as described below.
+
+The last bit of the code input acts as a mode selection for ALU. Remaining 3 are used for the ALU operation.
+
+Basic format for instructions:
+|    opcode     |   dest_reg    |    src1_reg   |   src2_reg    |
+| ------------- | ------------- | ------------- | ------------- |
+| bits 18 -> 14 | bits 13 -> 8  |  bits 7 -> 4  |  bits 3 -> 0  |
+|     5 bits    |    5 bits     |     4 bits    |     4 bits    |
+
+## Logical Instruction
+ ![Image Alt](image_url)
+## Arithmatic Instruction
+ ![Image Alt](image_url)
+## Custom Instruction
+ ![Image Alt](image_url)
+## Memory Instruction
+ ![Image Alt](image_url)
+## Control Flow Instruction
+ ![Image Alt](image_url)
+
+# Control Flow
+The Design is completed using a state machine approach. Three states are used to monitor the action of CPU. The three states used are reset, load and execute.
+
+In reset state, we initializa all address to base address and code input to 0. All the signals going out from controller are 0.
+
+In the load state, we initialise the Instruction register with the address and OPCODE to make sure the design is ready for execution.
+
+In execute state, we provide the function required by the USER based in the Instruction set provided.
