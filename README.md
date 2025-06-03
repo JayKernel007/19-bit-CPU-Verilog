@@ -2,7 +2,7 @@
 >A 19-bit processor designed using the Verilog harware description language(HDL). The processor is capable of fetching and executing a set of 19-bit machine instructions.
 
 # Schematic
- ![Image Alt]([image_url](https://github.com/JayKernel007/19-bit-CPU-Verilog/blob/main/Schematic.jpg?raw=true))
+ ![Image Alt]((https://github.com/JayKernel007/19-bit-CPU-Verilog/blob/main/Schematic.jpg?raw=true))
  
 # Instruction Set
 
