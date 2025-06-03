@@ -18,15 +18,39 @@ Basic format for instructions:
 |     5 bits    |    5 bits     |     4 bits    |     4 bits    |
 
 ## Logical Instruction
- ![Image Alt](image_url)
+
+|Mode|	Opcode	|  Instruction |
+| 00 |	 000   |	AND r1,r2,r3 |
+| 00 |  001   |	OR r1,r2,r3  |
+| 00 | 	010   |	XOR r1,r2,r3 |
+| 00 |	 011   |	NOT r1,r2    |
+ 
 ## Arithmatic Instruction
- ![Image Alt](image_url)
+|Mode|	Opcode	|  Instruction |
+| 01 |	 000   |	ADD r1,r2,r3 |
+| 01 |  001   |	MUL r1,r2,r3 |
+| 01 | 	010   |	SUB r1,r2,r3 |
+| 01 |	 011   |	DIV r1,r2,r3 |
+| 01 |	 100   |	INC r1       |
+| 01 |	 101   |	DEC r1       |
+
 ## Custom Instruction
- ![Image Alt](image_url)
+|Mode|	Opcode	|  Instruction |
+| 01 |	 000   |	ENC r1,r2    |
+| 01 |  001   |	DEC r1,r2    |
+
 ## Memory Instruction
- ![Image Alt](image_url)
+|Mode|	Opcode	|  Instruction |
+| 11 |	 000   |	LDA r1,addr  |
+| 11 |  001   |	LDB r1,addr  |
+| 11 | 	010   |	LDC r1,addr  |
+| 11 |	 011   |	ST addr,r1   |
+
 ## Control Flow Instruction
- ![Image Alt](image_url)
+|Mode|	Opcode	|  Instruction   |
+| 11 |	 100   |	JMP addr       |
+| 11 |  101   | BEQ r1,r2,addr |
+| 11 | 	110   |	BEN r1,r2,addr |
 
 # Control Flow
 The Design is completed using a state machine approach. Three states are used to monitor the action of CPU. The three states used are reset, load and execute.
