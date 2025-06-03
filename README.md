@@ -21,6 +21,7 @@ Basic format for instructions:
 ## Logical Instruction
 
 |Mode|	Opcode	|  Instruction |
+|----|--------|--------------|
 | 00 |	 000   |	AND r1,r2,r3 |
 | 00 |  001   |	OR r1,r2,r3  |
 | 00 | 	010   |	XOR r1,r2,r3 |
@@ -28,6 +29,7 @@ Basic format for instructions:
  
 ## Arithmatic Instruction
 |Mode|	Opcode	|  Instruction |
+|----|--------|--------------|
 | 01 |	 000   |	ADD r1,r2,r3 |
 | 01 |  001   |	MUL r1,r2,r3 |
 | 01 | 	010   |	SUB r1,r2,r3 |
@@ -37,11 +39,13 @@ Basic format for instructions:
 
 ## Custom Instruction
 |Mode|	Opcode	|  Instruction |
+|----|--------|--------------|
 | 01 |	 000   |	ENC r1,r2    |
 | 01 |  001   |	DEC r1,r2    |
 
 ## Memory Instruction
 |Mode|	Opcode	|  Instruction |
+|----|--------|--------------|
 | 11 |	 000   |	LDA r1,addr  |
 | 11 |  001   |	LDB r1,addr  |
 | 11 | 	010   |	LDC r1,addr  |
@@ -49,6 +53,7 @@ Basic format for instructions:
 
 ## Control Flow Instruction
 |Mode|	Opcode	|  Instruction   |
+|----|--------|----------------|
 | 11 |	 100   |	JMP addr       |
 | 11 |  101   | BEQ r1,r2,addr |
 | 11 | 	110   |	BEN r1,r2,addr |
