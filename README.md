@@ -2,7 +2,7 @@
 >A 19-bit processor designed using the Verilog harware description language(HDL). The processor is capable of fetching and executing a set of 19-bit machine instructions.
 
 # Schematic
- ![Image Alt](image_url)
+ ![Image Alt]([image_url](https://github.com/JayKernel007/19-bit-CPU-Verilog/blob/2c986753b7f5fb87a89af8d2153f7a4544976446/Schematic.jpg))
 # Instruction Set
 
 The instruction set plays a very important role to determine the operation of the CPU. The Code input to the Instruction memory is 19-bit long. This is sent to the instruction register which takes the bits [18:14] as OPCODE and [13:0] as address to start with.
